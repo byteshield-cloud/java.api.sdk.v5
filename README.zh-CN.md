@@ -81,12 +81,6 @@ public class Example {
 Sdk client = new Sdk(apiBaseUrl, appId, appSecret);
 ```
 
-委托访问场景可以额外传入用户 ID：
-
-```java
-Sdk client = new Sdk(apiBaseUrl, appId, appSecret, userId);
-```
-
 如需配置超时或代理，请传入自定义 OkHttp 客户端：
 
 ```java
@@ -98,7 +92,7 @@ OkHttpClient httpClient = new OkHttpClient.Builder()
     .readTimeout(30, TimeUnit.SECONDS)
     .build();
 
-Sdk client = new Sdk(apiBaseUrl, appId, appSecret, userId, httpClient);
+Sdk client = new Sdk(apiBaseUrl, appId, appSecret, "", httpClient);
 ```
 
 ## 请求

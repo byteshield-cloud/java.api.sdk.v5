@@ -82,12 +82,6 @@ The standard constructor accepts the API base URL, App ID, and App Secret:
 Sdk client = new Sdk(apiBaseUrl, appId, appSecret);
 ```
 
-An optional user ID can be supplied for delegated access:
-
-```java
-Sdk client = new Sdk(apiBaseUrl, appId, appSecret, userId);
-```
-
 To configure timeouts or a proxy, supply a custom OkHttp client:
 
 ```java
@@ -99,7 +93,7 @@ OkHttpClient httpClient = new OkHttpClient.Builder()
     .readTimeout(30, TimeUnit.SECONDS)
     .build();
 
-Sdk client = new Sdk(apiBaseUrl, appId, appSecret, userId, httpClient);
+Sdk client = new Sdk(apiBaseUrl, appId, appSecret, "", httpClient);
 ```
 
 ## Requests
